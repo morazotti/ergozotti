@@ -38,23 +38,6 @@
             bindings = <&to 0>;
             key-positions = <40 37>;
         };
-
-        game {
-            bindings = <&to 4>;
-            key-positions = <37 38 39 40>;
-        };
-    };
-
-    macros {
-        grave_a: grave_a {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(LC(U)) &kp LS(LC(N0)) &kp LS(LC(N0)) &kp LS(LC(E)) &kp LS(LC(N0))>,
-                <&macro_tap>;
-
-            label = "GRAVE_A";
-        };
     };
 
     keymap {
@@ -62,9 +45,9 @@
 
         default_layer {
             bindings = <
-&none      &kp Q           &kp W           &kp F          &kp P             &kp G       &kp J             &kp L        &kp U        &kp Y            &kp SEMICOLON    &none
+&none      &kp Q           &kp W           &kp F          &kp P             &kp G       &kp J             &kp L        &kp U        &kp Y            &kp SEMICOLON    &kp BACKSLASH
 &kp GRAVE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S    &mt LEFT_SHIFT T  &kp D       &kp H             &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
-&kp MINUS  &kp Z           &kp X           &kp C          &kp V             &kp B       &kp K             &kp M        &kp COMMA    &kp DOT          &kp FSLH         &kp BACKSLASH
+&kp MINUS  &kp Z           &kp X           &kp C          &kp V             &kp B       &kp K             &kp M        &kp COMMA    &kp DOT          &kp FSLH         &none
                                            &kp BACKSPACE  &lt 1 TAB         &kp DELETE  &mt C_MENU SPACE  &lt 2 ENTER  &to 3
             >;
         };
