@@ -49,10 +49,10 @@
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
-                                  &trans    &trans    &trans     &trans     &trans    &trans
+&mt LGUI F1     &kp DOLLAR             &kp AT_SIGN            &kp F4              &kp F5                   &kp F6                &kp F7        &kp F8              &kp F9            &kp F10           &kp F11           &kp F12
+&mt LCTRL PLUS  &mt LEFT_GUI NUMBER_4  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_1  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT N0  &mt RCTRL N8      &mt RIGHT_ALT N9  &mt RIGHT_GUI N7  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp N6        &kp K_PREV          &kp K_PLAY_PAUSE  &kp K_NEXT        &kp N0            &kp RALT
+                                                              &trans              &trans                   &trans                &trans        &trans              &trans
             >;
         };
 
