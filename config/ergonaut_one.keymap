@@ -33,6 +33,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
+
+        emergence {
+            bindings = <&to 0>;
+            key-positions = <40 39>;
+        };
     };
 
     keymap {
@@ -40,18 +45,18 @@
 
         default_layer {
             bindings = <
-&mt LGUI RBKT    &kp Q           &kp W           &kp F        &kp P             &kp G       &kp J      &kp L        &kp U        &kp Y            &kp SEMICOLON    &kp LBKT
-&mt LCTRL GRAVE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp D       &kp H      &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
-&mt LALT MINUS   &kp Z           &kp X           &kp C        &kp V             &kp B       &kp K      &kp M        &kp COMMA    &kp DOT          &kp FSLH         &mt RALT BSLH
-                                                 &lt 2 TAB    &kp BACKSPACE     &kp DELETE  &kp SPACE  &kp ENTER    &lt 2 DEL
+&kp RIGHT_BRACKET  &kp Q           &kp W           &kp F        &kp P             &kp G       &kp J      &kp L        &kp U        &kp Y            &kp SEMICOLON    &kp LBKT
+&kp GRAVE          &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp D       &kp H      &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
+&kp MINUS          &kp Z           &kp X           &kp C        &kp V             &kp B       &kp K      &kp M        &kp COMMA    &kp DOT          &kp FSLH         &kp BACKSLASH
+                                                   &lt 2 TAB    &kp BACKSPACE     &kp DELETE  &kp SPACE  &kp ENTER    &lt 2 DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp DOLLAR             &kp AT_SIGN            &kp F4              &kp F5                   &kp F6                &kp F7        &kp F8              &kp F9            &kp F10           &kp F11           &kp F12
+&mt LGUI F1     &kp DOLLAR             &kp AT_SIGN            &kp HASH            &kp EXCLAMATION          &kp PERCENT           &kp CARET     &kp AMPERSAND       &kp ASTERISK      &kp MINUS         &kp EQUAL         &trans
 &mt LCTRL PLUS  &mt LEFT_GUI NUMBER_4  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_1  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT N0  &mt RCTRL N8      &mt RIGHT_ALT N9  &mt RIGHT_GUI N7  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp N6        &kp K_PREV          &kp K_PLAY_PAUSE  &kp K_NEXT        &kp N0            &kp RALT
+&mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &none         &kp K_PREV          &kp K_PLAY_PAUSE  &kp K_NEXT        &none             &kp RALT
                                                               &trans              &trans                   &trans                &trans        &trans              &trans
             >;
         };
