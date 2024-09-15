@@ -40,14 +40,23 @@
         };
     };
 
+    macros {
+        mail: mail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp M &kp B &kp S &kp Y &kp N &kp C &kp SPACE &kp MINUS &kp A &kp SPACE &kp AMPS &kp AMPS &kp SPACE &kp N &kp O &kp T &kp M &kp U &kp C &kp H &kp SPACE &kp N &kp E &kp W>;
+            label = "MAIL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&none      &kp Q           &kp W           &kp F          &kp P             &kp G       &kp J             &kp L        &kp U        &kp Y            &kp SEMICOLON    &kp BACKSLASH
-&kp GRAVE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S    &mt LEFT_SHIFT T  &kp D       &kp H             &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
-&kp MINUS  &kp Z           &kp X           &kp C          &kp V             &kp B       &kp K             &kp M        &kp COMMA    &kp DOT          &kp FSLH         &none
+&kp GRAVE  &kp Q           &kp W           &kp F          &kp P             &kp G       &kp J             &kp L        &kp U        &kp Y            &kp SEMICOLON    &kp BACKSLASH
+&kp MINUS  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S    &mt LEFT_SHIFT T  &kp D       &kp H             &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
+&none      &kp Z           &kp X           &kp C          &kp V             &kp B       &kp K             &kp M        &kp COMMA    &kp DOT          &kp FSLH         &none
                                            &kp BACKSPACE  &lt 1 TAB         &kp DELETE  &mt C_MENU SPACE  &lt 2 ENTER  &to 3
             >;
         };
@@ -55,7 +64,7 @@
         lower_layer {
             bindings = <
 &mt LGUI F1     &kp DOLLAR             &kp AT_SIGN            &kp HASH            &kp EXCLAMATION          &kp PERCENT           &kp CARET     &kp AMPERSAND       &kp ASTERISK  &kp MINUS         &kp EQUAL         &trans
-&mt LCTRL PLUS  &mt LEFT_GUI NUMBER_4  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_1  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT N0  &mt RCTRL N8  &mt RIGHT_ALT N9  &mt RIGHT_GUI N7  &trans
+&kp C_AL_EMAIL  &mt LEFT_GUI NUMBER_4  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_1  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT N0  &mt RCTRL N8  &mt RIGHT_ALT N9  &mt RIGHT_GUI N7  &trans
 &mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp K_PREV    &kp K_PLAY_PAUSE    &kp K_NEXT    &kp COMMA         &kp PERIOD        &trans
                                                               &trans              &trans                   &trans                &trans        &trans              &trans
             >;
