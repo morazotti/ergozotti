@@ -63,10 +63,10 @@
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp DOLLAR             &kp AT_SIGN            &kp HASH            &kp EXCLAMATION          &kp PERCENT           &kp CARET     &kp AMPERSAND       &kp ASTERISK  &kp MINUS         &kp EQUAL         &trans
-&kp C_AL_EMAIL  &mt LEFT_GUI NUMBER_4  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_1  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT N0  &mt RCTRL N8  &mt RIGHT_ALT N9  &mt RIGHT_GUI N7  &trans
-&mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp K_PREV    &kp K_PLAY_PAUSE    &kp K_NEXT    &kp COMMA         &kp PERIOD        &trans
-                                                              &trans              &trans                   &trans                &trans        &trans              &trans
+&mt LGUI F1     &kp EXCLAMATION        &kp AT_SIGN            &kp HASH            &kp DOLLAR               &kp PERCENT           &kp CARET     &kp AMPERSAND             &kp ASTERISK  &kp MINUS         &kp EQUAL               &trans
+&kp C_AL_EMAIL  &mt LEFT_GUI NUMBER_1  &mt LEFT_ALT NUMBER_2  &mt LCTRL NUMBER_3  &mt LEFT_SHIFT NUMBER_4  &kp N5                &kp NUMBER_6  &mt RIGHT_SHIFT NUMBER_7  &mt RCTRL N8  &mt RIGHT_ALT N9  &mt RIGHT_GUI NUMBER_0  &kp PLUS
+&mt LALT EQUAL  &kp K_MUTE             &kp C_VOLUME_DOWN      &kp C_VOL_UP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp K_PREV    &kp K_PLAY_PAUSE          &kp K_NEXT    &kp COMMA         &kp PERIOD              &trans
+                                                              &trans              &trans                   &trans                &trans        &trans                    &trans
             >;
         };
 
@@ -99,7 +99,7 @@
 
         gamenum {
             bindings = <
-&trans  &kp N5  &kp N1  &kp N2  &kp N3  &kp N4  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans  &trans
