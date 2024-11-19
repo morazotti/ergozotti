@@ -21,6 +21,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -44,10 +53,10 @@
 
         raise_layer {
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME       &kp PSCRN    &kp PG_UP  &kp SLCK         &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp PAUSE_BREAK  &kp RALT
-                                             &trans     &trans     &trans        &trans        &trans         &trans
+&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8   &kp KP_N9         &kp KP_MINUS  &kp PRINTSCREEN  &kp C_MENU_DECREASE  &kp K_MUTE   &kp C_MENU_INCREASE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
+&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5   &kp KP_N6         &kp KP_PLUS   &kp LEFT         &kp DOWN             &kp UP       &kp RIGHT            &trans                &trans
+&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2   &kp KP_N3         &kp KP_DOT    &kp HOME         &kp PAGE_DOWN        &kp PAGE_UP  &kp END              &trans                &trans
+                                             &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT    &kp K_PREV       &kp K_PLAY_PAUSE     &kp K_NEXT
             >;
         };
 
