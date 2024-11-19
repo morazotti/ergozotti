@@ -42,15 +42,6 @@
         };
     };
 
-    macros {
-        cedilla: cedilla {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(C)>;
-            label = "CEDILLA";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -58,7 +49,7 @@
             bindings = <
 &mt LGUI RBKT                     &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y         &kp U                    &kp I         &kp O           &kp P                    &kp LBKT
 &kp GRAVE                         &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H         &mt RIGHT_SHIFT J        &mt RCTRL K   &mt LEFT_ALT L  &mt RIGHT_GUI SEMICOLON  &kp SQT
-&mt LG(LC(LA(LEFT_SHIFT))) MINUS  &kp Z           &kp X           &mt C C      &kp V             &kp B        &kp N         &kp M                    &kp COMMA     &kp DOT         &kp FSLH                 &kp BSLH
+&mt LG(LC(LA(LEFT_SHIFT))) MINUS  &kp Z           &kp X           &mt RA(C) C  &kp V             &kp B        &kp N         &kp M                    &kp COMMA     &kp DOT         &kp FSLH                 &kp BSLH
                                                                   &lt 3 TAB    &kp SPACE         &lt 1 ENTER  &lt 1 ESCAPE  &mt RIGHT_ALT BACKSPACE  &lt 3 DELETE
             >;
         };
