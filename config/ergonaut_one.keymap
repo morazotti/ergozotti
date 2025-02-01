@@ -40,6 +40,11 @@
             bindings = <&tog 0>;
             key-positions = <37 38 39 40>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <15 16>;
+        };
     };
 
     keymap {
@@ -74,7 +79,7 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
+&bootloader  &none         &none         &none         &none         &none         &none         &none         &tog 4        &none         &none         &bootloader
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
 &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
                                          &trans        &none         &trans        &none         &trans        &trans
@@ -83,10 +88,10 @@
 
         game_mode {
             bindings = <
-&kp TAB    &kp T  &kp Q  &kp W     &kp E      &kp R  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp G  &kp A  &kp S     &kp D      &kp F  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp B  &kp Z  &kp X     &kp C      &kp V  &trans  &trans  &trans  &trans  &trans  &trans
-                         &kp LALT  &kp SPACE  &to 5  &trans  &trans  &trans
+&kp TAB    &kp Q  &kp W  &kp E     &kp R        &kp T  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F        &kp G  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V        &kp B  &trans  &trans  &trans  &trans  &trans  &trans
+                         &kp LALT  &lt 6 SPACE  &to 5  &trans  &trans  &trans
             >;
         };
 
@@ -95,7 +100,16 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &tog 0  &trans  &trans
+            >;
+        };
+
+        mirror-game {
+            bindings = <
+&kp TAB    &kp P     &kp O    &kp I      &kp U  &kp Y    &trans  &trans  &trans  &trans  &trans  &trans
+&kp RCTRL  &kp SEMI  &kp L    &kp K      &kp J  &kp H    &trans  &trans  &trans  &trans  &trans  &trans
+&kp RSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp N    &trans  &trans  &trans  &trans  &trans  &trans
+                              &kp LALT   &none  &kp ESC  &trans  &trans  &trans
             >;
         };
     };
