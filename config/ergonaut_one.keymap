@@ -86,7 +86,7 @@
         dotdotdash: dotdotdash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DOT &kp DOT &kp FSLH>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
             label = "DOTDOTDASH";
         };
     };
