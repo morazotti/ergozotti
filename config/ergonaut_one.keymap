@@ -70,6 +70,21 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <30 31>;
         };
+
+	cut {
+	    bindings = <&kp K_CUT>;
+	    key-positions = <25 26>;
+	};
+
+	copy {
+	    bindings = <&kp K_COPY>;
+	    key-positions = <26 27>;
+	};
+
+	paste {
+	    bindings = <&kp K_PASTE>;
+	    key-positions = <27 28>;
+	};
     };
 
     keymap {
