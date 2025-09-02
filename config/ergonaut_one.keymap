@@ -40,11 +40,6 @@
             bindings = <&tog 0>;
             key-positions = <37 38 39 40>;
         };
-
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <15 16>;
-        };
     };
 
     keymap {
