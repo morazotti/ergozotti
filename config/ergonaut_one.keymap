@@ -71,20 +71,18 @@
             key-positions = <30 31>;
         };
 
-	cut {
-	    bindings = <&kp K_CUT>;
-	    key-positions = <25 26>;
-	};
+        bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+        };
 
-	copy {
-	    bindings = <&kp K_COPY>;
-	    key-positions = <26 27>;
-	};
 
-	paste {
-	    bindings = <&kp K_PASTE>;
-	    key-positions = <27 28>;
-	};
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
+        };
+
+
     };
 
     keymap {
