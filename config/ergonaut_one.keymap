@@ -45,6 +45,31 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <4 5>;
         };
+
+	left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 17>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <28 29>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <6 7>;
+        };
+
+	right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <18 19>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <30 31>;
+        };
     };
 
     keymap {
