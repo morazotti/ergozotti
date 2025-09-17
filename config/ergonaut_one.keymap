@@ -32,12 +32,12 @@
         compatible = "zmk,combos";
 
         capsword {
-            bindings = <&caps_word>;
+            bindings = <&capsword>;
             key-positions = <16 19>;
         };
 
         to0 {
-            bindings = <&tog 0>;
+            bindings = <&tog 4>;
             key-positions = <37 38 39 40>;
         };
 
@@ -88,6 +88,15 @@
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
             label = "DOTDOTDASH";
+        };
+    };
+
+    behaviors {
+        capsword: capsword {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPSWORD";
+            #binding-cells = <0>;
+            continue-list = <SEMICOLON A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
         };
     };
 
