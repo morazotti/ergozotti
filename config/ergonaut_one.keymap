@@ -111,10 +111,10 @@
 
         game_mode {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R        &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F        &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V        &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &tog 4
-                         &kp LALT  &lt 6 SPACE  &tog 5  &trans  &trans  &trans
+&kp TAB    &kp Q  &kp W  &kp E           &kp R        &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp LSHFT  &kp A  &kp S  &kp D           &kp F        &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C           &kp V        &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &tog 4
+                         &mt LALT ENTER  &lt 6 SPACE  &tog 5  &trans  &trans  &trans
             >;
         };
 
