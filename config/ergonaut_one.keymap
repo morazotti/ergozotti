@@ -8,13 +8,17 @@
 #define ADJ 3
 
 &lt {
-    quick-tap-ms = <200>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <130>;
+    require-prior-idle-ms = <120>;
     flavor = "balanced";
     retro-tap;
 };
 
 &mt {
-    quick-tap-ms = <200>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <130>;
+    require-prior-idle-ms = <120>;
     flavor = "balanced";
 };
 
@@ -32,23 +36,45 @@
         compatible = "zmk,combos";
 
         capsword {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
             bindings = <&capsword>;
             key-positions = <16 19>;
         };
 
         bksp {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
         };
 
         del {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
         };
 
         escape {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
             bindings = <&kp ESC>;
             key-positions = <19 20>;
+        };
+
+        tab {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+
+        leader {
+            timeout-ms = <18>;
+            require-prior-idle-ms = <80>;
+            bindings = <&kp LS(LA(LC(LG(F12))))>;
+            key-positions = <20 21>;
         };
     };
 
@@ -68,6 +94,16 @@
             #binding-cells = <0>;
             continue-list = <SEMICOLON A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
         };
+
+        altgr_accent: altgr_accent {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALTGR_ACCENT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -77,7 +113,7 @@
             bindings = <
 &kp RBKT   &kp Q           &kp W           &kp E        &kp R                           &kp T        &kp Y         &kp U                     &kp I         &kp O           &kp P                    &kp LBKT
 &kp GRAVE  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F                &kp G        &kp H         &mt RIGHT_SHIFT J         &mt RCTRL K   &mt LEFT_ALT L  &mt RIGHT_GUI SEMICOLON  &kp SQT
-&kp MINUS  &mt RALT Z      &kp X           &mt RA(C) C  &kp V                           &kp B        &kp N         &kp M                     &kp COMMA     &kp DOT         &mt RALT FSLH            &kp BSLH
+&kp MINUS  &mt RALT Z      &kp X           &mt RA(C) C  &kp V                           &kp B        &kp N         &kp M                     &kp COMMA     &kp DOT         &altgr_accent RALT FSLH  &kp BSLH
                                            &lt 2 TAB    &mt LS(LA(LC(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &mt LEFT_SHIFT BACKSPACE  &lt 2 DELETE
             >;
         };

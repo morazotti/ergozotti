@@ -1,0 +1,7 @@
+* Tasks
+** TODO 20260305174619 leader key 
+:PROPERTIES:
+:ID:       bbf7dae4-791f-4f48-8d0a-5c1d05a15b24
+:TASK_NUM: 1
+:END:
+Movi a leader key para um combo (e+i no colemak), mas parece que o mais sensato seja colocá-la onde meu backspace é atualmente. Vou pensar nisso.

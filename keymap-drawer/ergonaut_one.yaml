@@ -1,6 +1,7 @@
+layout: {zmk_keyboard: ergonaut_one}
 layers:
   default:
-  - {t: ']', h: Gui}
+  - ']'
   - Q
   - W
   - E
@@ -12,36 +13,36 @@ layers:
   - O
   - P
   - '['
-  - {t: '`', h: Ctrl}
-  - A
-  - S
-  - D
-  - F
+  - '`'
+  - {t: A, h: LEFT GUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: Ctrl}
+  - {t: F, h: LEFT SHIFT}
   - G
   - H
-  - J
-  - K
-  - L
-  - ;
-  - {t: '''', h: Ctrl}
-  - {t: '-', h: Alt}
-  - Z
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: Ctrl}
+  - {t: L, h: LEFT ALT}
+  - {t: ;, h: RIGHT GUI}
+  - ''''
+  - '-'
+  - {t: Z, h: Alt}
   - X
-  - C
+  - {t: C, h: AltGr+C}
   - V
   - B
   - N
   - M
   - ','
   - .
-  - /
-  - {t: \, h: Alt}
+  - {t: /, h: Alt}
+  - \
   - {t: ↹, h: raise}
-  - {t: ␣, h: Shift}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - {t: ⌫, h: Shift}
-  - {t: ⌦, h: raise}
+  - {t: ␣, h: Meh+LEFT GUI}
+  - {t: ENTER, h: lower}
+  - {t: ESCAPE, h: lower}
+  - {t: BACKSPACE, h: LEFT SHIFT}
+  - {t: DELETE, h: raise}
   lower:
   - {t: F1, h: Gui}
   - F2
@@ -92,42 +93,42 @@ layers:
   - KP 8
   - KP 9
   - KP MINUS
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
-  - SLCK
-  - CLCK
-  - {t: '=', h: Ctrl}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - PRINTSCREEN
+  - Vol Down
   - MUTE
+  - VOLUME UP
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - {t: '=', h: Ctrl}
+  - {t: KP MULTIPLY, h: LEFT GUI}
+  - {t: KP 4, h: LEFT ALT}
+  - {t: KP 5, h: Ctrl}
+  - {t: KP 6, h: LEFT SHIFT}
+  - KP PLUS
   - ←
+  - ↓
   - ↑
   - →
-  - Insert
-  - {t: APP, h: Ctrl}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Alt
   - KP 0
   - KP 1
   - KP 2
   - KP 3
   - KP DOT
-  - Vol Down
+  - Home
+  - PAGE DOWN
+  - PAGE UP
   - End
-  - ↓
-  - Page Down
-  - Pause Break
-  - Alt
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&dotdotdash'
+  - {t: game_mode, h: toggle}
+  - {t: PREV, type: held}
+  - PLAY PAUSE
+  - {t: NEXT, h: lower}
+  - {t: PREV, h: lower}
+  - PLAY PAUSE
+  - NEXT
   adjust:
   - Boot
   - ''
@@ -171,3 +172,145 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  game_mode:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - Shift
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - {t: ▽, type: trans}
+  - Ctrl
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: game_mode, h: toggle}
+  - {t: ENTER, h: Alt}
+  - {t: ␣, h: mirror-game}
+  - {t: game_num, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  game_num:
+  - F1
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - F4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F2
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - F5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F3
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - F6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Ctrl, h: sticky}
+  - {t: game_num, h: toggle}
+  - {t: game_num, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mirror-game:
+  - ↹
+  - P
+  - O
+  - I
+  - U
+  - Y
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctrl
+  - ;
+  - L
+  - K
+  - J
+  - H
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Shift
+  - /
+  - .
+  - ','
+  - M
+  - N
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt
+  - {type: held}
+  - Esc
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [16, 19]
+  k: '&capsword'
+- p: [7, 8]
+  k: BACKSPACE
+- p: [8, 9]
+  k: DELETE
+- p: [19, 20]
+  k: Esc
+- p: [14, 15]
+  k: ↹
+- p: [20, 21]
+  k: Hyper+F12
