@@ -4,26 +4,26 @@ layers:
   - ']'
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
   - '['
   - '`'
   - {t: A, h: LEFT GUI}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: Ctrl}
-  - {t: F, h: LEFT SHIFT}
-  - G
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: Ctrl}
+  - {t: T, h: LEFT SHIFT}
+  - D
   - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: Ctrl}
-  - {t: L, h: LEFT ALT}
-  - {t: ;, h: RIGHT GUI}
+  - {t: N, h: RIGHT SHIFT}
+  - {t: E, h: Ctrl}
+  - {t: I, h: LEFT ALT}
+  - {t: O, h: RIGHT GUI}
   - ''''
   - '-'
   - {t: Z, h: Alt}
@@ -31,11 +31,11 @@ layers:
   - {t: C, h: AltGr+C}
   - V
   - B
-  - N
+  - K
   - M
   - ','
   - .
-  - {t: /, h: Alt}
+  - {t: /, h: RIGHT ALT}
   - \
   - {t: ↹, h: raise}
   - {t: ␣, h: Meh+LEFT GUI}
@@ -298,6 +298,49 @@ layers:
   - Alt
   - {type: held}
   - Esc
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  modifiers:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
