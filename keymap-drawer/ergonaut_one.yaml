@@ -41,8 +41,8 @@ layers:
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
   - {t: ESCAPE, h: lower}
-  - {t: BACKSPACE, h: LEFT SHIFT}
-  - {t: DELETE, h: raise}
+  - {t: LEFT SHIFT, h: sticky}
+  - {t: BACKSPACE, h: raise}
   lower:
   - {t: F1, h: Gui}
   - F2
