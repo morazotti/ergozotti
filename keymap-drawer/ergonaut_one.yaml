@@ -230,7 +230,7 @@ layers:
   - {t: ▽, type: trans}
   - F2
   - '-'
-  - '4'
+  - {t: '4', h: LEFT ALT}
   - '5'
   - '6'
   - F5
@@ -271,7 +271,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctrl
+  - LEFT SHIFT
   - ;
   - L
   - K
@@ -283,7 +283,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Shift
+  - LEFT CONTROL
   - /
   - .
   - ','
