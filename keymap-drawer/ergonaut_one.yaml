@@ -4,39 +4,39 @@ layers:
   - ']'
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
-  - '['
-  - '`'
-  - {t: A, h: LEFT GUI}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: Ctrl}
-  - {t: F, h: LEFT SHIFT}
   - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - '['
+  - '&live_keys GRAVE'
+  - {t: A, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: Ctrl}
+  - {t: T, h: LEFT SHIFT}
+  - D
   - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: Ctrl}
-  - {t: L, h: LEFT ALT}
-  - {t: ;, h: RIGHT GUI}
-  - ''''
-  - '-'
-  - {t: Z, h: Alt}
+  - {t: N, h: RIGHT SHIFT}
+  - {t: E, h: Ctrl}
+  - {t: I, h: LEFT ALT}
+  - {t: O, h: RIGHT GUI}
+  - '&live_keys SQT'
+  - {t: '-', h: RIGHT ALT}
+  - {t: Z, h: accents}
   - X
-  - {t: C, h: AltGr+C}
+  - {t: C, h: 'AltGr+,'}
   - V
   - B
-  - N
+  - K
   - M
   - ','
   - .
-  - {t: /, h: Alt}
-  - \
+  - {t: /, h: accents}
+  - {t: \, h: RIGHT ALT}
   - {t: ↹, h: raise}
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
@@ -62,7 +62,7 @@ layers:
   - '#'
   - $
   - '%'
-  - ^
+  - '&live_keys CARET'
   - '&'
   - '*'
   - (
@@ -121,7 +121,7 @@ layers:
   - PAGE DOWN
   - PAGE UP
   - End
-  - '&dotdotdash'
+  - {t: ▽, type: trans}
   - {t: game_mode, h: toggle}
   - {t: PREV, type: held}
   - PLAY PAUSE
@@ -298,6 +298,49 @@ layers:
   - Alt
   - {type: held}
   - Esc
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  accents:
+  - {t: ▽, type: trans}
+  - '&umt A'
+  - {t: ▽, type: trans}
+  - '&tld A'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&act U'
+  - {t: ▽, type: trans}
+  - '&umt U'
+  - '&umt O'
+  - '~'
+  - '&act A'
+  - '`'
+  - AltGr+S
+  - ''''
+  - Sft+'
+  - {t: ▽, type: trans}
+  - '&tld N'
+  - '&act E'
+  - '&act I'
+  - '&act O'
+  - '&tld O'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ^
+  - AltGr+,
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
