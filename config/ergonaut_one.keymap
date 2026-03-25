@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
 
         capsword {
-            timeout-ms = <18>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <80>;
             bindings = <&capsword>;
             key-positions = <16 19>;
@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CAPSWORD";
             #binding-cells = <0>;
-            continue-list = <SEMI MINUS UNDERSCORE BACKSPACE A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+            continue-list = <SEMICOLON MINUS UNDERSCORE BACKSPACE A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
         };
 
         altgr_accent: altgr_accent {
