@@ -47,14 +47,14 @@
         };
 
         bksp {
-            timeout-ms = <18>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <80>;
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
         };
 
         del {
-            timeout-ms = <18>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <80>;
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
@@ -68,7 +68,7 @@
         };
 
         tab {
-            timeout-ms = <18>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <80>;
             bindings = <&kp TAB>;
             key-positions = <14 15>;
