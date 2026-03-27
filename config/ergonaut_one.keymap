@@ -79,6 +79,11 @@
             bindings = <&kp LS(LA(LC(LG(F12))))>;
             key-positions = <20 21>;
         };
+
+        mouse-layer {
+            bindings = <&tog 8>;
+            key-positions = <2 4>;
+        };
     };
 
     macros {
@@ -92,31 +97,30 @@
         act: act {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&ans>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&ans &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "act";
         };
 
         grv: grv {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&gns>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&gns &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "grv";
         };
 
         tld: tld {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp TILDE>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp TILDE &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "tld";
         };
 
         umt: umt {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp DQT>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp DQT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "umt";
         };
-	
     };
 
     behaviors {
@@ -137,22 +141,23 @@
             quick-tap-ms = <200>;
         };
 
-	ans: acute_noshift {
-	    compatible = "zmk,behavior-mod-morph";
-	    label = "ACUTE_NO_SHIFT";
-	    #binding-cells = <0>;
-	    bindings = <&kp SQT>, <&kp SQT>;
-	    mods = <(MOD_LSFT|MOD_RSFT)>;
-	};
+        ans: acute_noshift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE_NO_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp SQT>;
 
-	gns: grave_noshift {
-	    compatible = "zmk,behavior-mod-morph";
-	    label = "GRAVE_NO_SHIFT";
-	    #binding-cells = <0>;
-	    bindings = <&kp GRAVE>, <&kp GRAVE>;
-	    mods = <(MOD_LSFT|MOD_RSFT)>;
-	};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
+        gns: grave_noshift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_NO_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp GRAVE>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -160,19 +165,19 @@
 
         default_layer {
             bindings = <
-&kp RBKT               &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L              &kp U            &kp Y           &kp SEMICOLON    &kp LBKT
-&live_keys GRAVE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O  &live_keys SQT
-&mt RIGHT_ALT MINUS    &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M              &kp COMMA        &kp DOT         &lt 7 FSLH       &mt RIGHT_ALT BSLH
-                                                       &lt 2 TAB        &mt LS(LA(LC(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &sk LEFT_SHIFT     &lt 2 BACKSPACE
+&kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L              &kp U            &kp Y           &kp SEMICOLON    &kp LBKT
+&live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O  &live_keys SQT
+&mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M              &kp COMMA        &kp DOT         &lt 7 FSLH       &mt RIGHT_ALT BSLH
+                                                     &lt 2 TAB        &mt LS(LA(LC(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &sk LEFT_SHIFT     &lt 2 BACKSPACE
             >;
         };
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp F7                 &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp F7            &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
 &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &live_keys CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6                 &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
-                                  &trans    &trans    &trans     &trans                 &trans    &trans
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6            &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
+                                  &trans    &trans    &trans     &trans            &trans    &trans
             >;
         };
 
@@ -223,10 +228,19 @@
 
         accents {
             bindings = <
-&trans     &umt A   &trans     &tld A        &trans   &trans           &trans      &trans    &act U  &trans  &umt U  &umt O
-&kp TILDE  &act A   &kp GRAVE  &kp RA(S)     &kp SQT  &kp LS(SQT)      &trans      &tld N    &act E  &act I  &act O  &tld O
-&trans     &trans   &kp CARET  &kp RA(COMMA) &trans   &trans           &trans      &trans    &trans  &trans  &trans  &trans
-    			       &trans        &trans   &trans           &trans      &trans    &trans
+&trans     &umt A  &trans     &tld A         &trans   &trans       &trans  &trans  &act U  &trans  &umt U  &umt O
+&kp TILDE  &act A  &kp GRAVE  &kp RA(S)      &kp SQT  &kp LS(SQT)  &trans  &tld N  &act E  &act I  &act O  &tld O
+&trans     &trans  &kp CARET  &kp RA(COMMA)  &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans         &trans   &trans       &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+                        &trans  &trans  &tog 8  &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
     };
