@@ -162,7 +162,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TOGGLE_OR_QUIT_GAME_NUM";
             #binding-cells = <0>;
-            bindings = <&to 5>, <&tog 5>;
+            bindings = <&sl 5>, <&tog 5>;
         };
     };
 
@@ -207,19 +207,19 @@
 
         game_mode {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E           &kp R        &kp T  &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&kp LSHFT  &kp A  &kp S  &kp D           &kp F        &kp G  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
-&kp LCTRL  &kp Z  &kp X  &kp C           &kp V        &kp B  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &tog 4
-                         &mt LALT ENTER  &lt 6 SPACE  &sl 5  &trans  &trans  &trans
+&kp TAB    &kp Q  &kp W  &kp E           &kp R        &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp LSHFT  &kp A  &kp S  &kp D           &kp F        &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&kp LCTRL  &kp Z  &kp X  &kp C           &kp V        &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &tog 4
+                         &mt LALT ENTER  &lt 6 SPACE  &toggle_or_quit_game_num  &trans  &trans  &trans
             >;
         };
 
         game_num {
             bindings = <
-&kp F1  &kp EQUAL     &kp N7                 &kp N8     &kp N9     &kp F4                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp F2  &kp MINUS     &mt LEFT_ALT NUMBER_4  &kp N5     &kp N6     &kp F5                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp F3  &kp NUMBER_0  &kp N1                 &kp N2     &kp N3     &kp F6                    &trans  &trans  &trans  &trans  &trans  &trans
-                                             &sk LCTRL  &kp SPACE  &toggle_or_quit_game_num  &trans  &trans  &trans
+&kp F1  &kp EQUAL     &kp N7                 &kp N8     &kp N9     &kp F4  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F2  &kp MINUS     &mt LEFT_ALT NUMBER_4  &kp N5     &kp N6     &kp F5  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F3  &kp NUMBER_0  &kp N1                 &kp N2     &kp N3     &kp F6  &trans  &trans  &trans  &trans  &trans  &trans
+                                             &sk LCTRL  &kp SPACE  &trans  &trans  &trans  &trans
             >;
         };
 

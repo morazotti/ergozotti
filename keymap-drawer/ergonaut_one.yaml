@@ -211,7 +211,7 @@ layers:
   - {t: game_mode, h: toggle}
   - {t: ENTER, h: Alt}
   - {t: ␣, h: mirror-game}
-  - {t: game_num, h: sticky}
+  - '&toggle_or_quit_game_num'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -254,7 +254,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: Ctrl, h: sticky}
   - ␣
-  - {t: '&toggle_or_quit_game_num', type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
