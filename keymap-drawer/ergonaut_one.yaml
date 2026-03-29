@@ -211,7 +211,7 @@ layers:
   - {t: game_mode, h: toggle}
   - {t: ENTER, h: Alt}
   - {t: ␣, h: mirror-game}
-  - {t: game_num, h: toggle}
+  - {t: game_num, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -253,8 +253,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Ctrl, h: sticky}
-  - {t: game_num, h: toggle}
-  - {t: game_num, h: toggle}
+  - ␣
+  - {t: game_num, h: toggle, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -344,49 +344,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  mouse:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Mouse ←
-  - Mouse ↓
-  - Mouse ↑
-  - Mouse →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Scroll ←
-  - Scroll ↓
-  - Scroll ↑
-  - Scroll →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: mouse, h: toggle}
-  - Left Click
-  - Middle Click
-  - Right Click
 combos:
 - p: [16, 19]
   k: '&capsword'
@@ -401,4 +358,4 @@ combos:
 - p: [20, 21]
   k: Hyper+F12
 - p: [2, 4]
-  k: {t: mouse, h: toggle}
+  k: {t: default, h: toggle}
