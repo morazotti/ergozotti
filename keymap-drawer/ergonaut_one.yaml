@@ -357,5 +357,9 @@ combos:
   k: ↹
 - p: [20, 21]
   k: Hyper+F12
-- p: [2, 4]
-  k: {t: default, h: toggle}
+- p: [25, 26]
+  k: Ctl+X
+- p: [26, 27]
+  k: Ctl+C
+- p: [27, 28]
+  k: Ctl+V

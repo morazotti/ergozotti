@@ -79,9 +79,19 @@
             key-positions = <20 21>;
         };
 
-        mouse-layer {
-            bindings = <&tog 0>;
-            key-positions = <2 4>;
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <25 26>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <26 27>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <27 28>;
         };
     };
 
