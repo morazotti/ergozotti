@@ -157,6 +157,13 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        toggle_or_quit_game_num: toggle_or_quit_game_num {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOGGLE_OR_QUIT_GAME_NUM";
+            #binding-cells = <0>;
+            bindings = <&to 5>, <&tog 5>;
+        };
     };
 
     keymap {
@@ -209,10 +216,10 @@
 
         game_num {
             bindings = <
-&kp F1  &kp EQUAL     &kp N7                 &kp N8     &kp N9     &kp F4  &trans  &trans  &trans  &trans  &trans  &trans
-&kp F2  &kp MINUS     &mt LEFT_ALT NUMBER_4  &kp N5     &kp N6     &kp F5  &trans  &trans  &trans  &trans  &trans  &trans
-&kp F3  &kp NUMBER_0  &kp N1                 &kp N2     &kp N3     &kp F6  &trans  &trans  &trans  &trans  &trans  &trans
-                                             &sk LCTRL  &kp SPACE  &tog 5  &trans  &trans  &trans
+&kp F1  &kp EQUAL     &kp N7                 &kp N8     &kp N9     &kp F4                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp F2  &kp MINUS     &mt LEFT_ALT NUMBER_4  &kp N5     &kp N6     &kp F5                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp F3  &kp NUMBER_0  &kp N1                 &kp N2     &kp N3     &kp F6                    &trans  &trans  &trans  &trans  &trans  &trans
+                                             &sk LCTRL  &kp SPACE  &toggle_or_quit_game_num  &trans  &trans  &trans
             >;
         };
 

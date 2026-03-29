@@ -254,7 +254,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: Ctrl, h: sticky}
   - ␣
-  - {t: game_num, h: toggle, type: held}
+  - {t: '&toggle_or_quit_game_num', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

@@ -1442,9 +1442,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(351, 224) rotate(30.0)" class="key held keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
-<a href="#game_num">
-<text x="0" y="0" class="key held tap layer-activator"><tspan style="font-size: 88%">game_num</tspan></text>
-</a><text x="0" y="38" class="key held hold">toggle</text>
+<text x="0" y="0" class="key held tap"><tspan style="font-size: 64%">&amp;toggle_or…</tspan></text>
 </g>
 <g transform="translate(489, 224) rotate(-30.0)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
