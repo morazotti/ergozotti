@@ -95,7 +95,7 @@
         };
 
         C-T {
-            bindings = <&kp RS(LC(T))>;
+            bindings = <&kp LC(LS(T))>;
             key-positions = <15 16>;
         };
     };
