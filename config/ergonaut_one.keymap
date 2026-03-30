@@ -89,12 +89,12 @@
 
         caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <19 20>;
+            key-positions = <16 19>;
         };
 
         ctrl_shift_t {
             bindings = <&kp LC(LS(T))>;
-            key-positions = <15	16>;
+            key-positions = <15 16>;
         };
     };
 

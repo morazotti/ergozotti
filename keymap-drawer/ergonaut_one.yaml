@@ -41,7 +41,7 @@ layers:
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
   - {t: ESCAPE, h: lower}
-  - '&sticky_shift_capsword'
+  - '&ros'
   - {t: BACKSPACE, h: raise}
   lower:
   - {t: F1, h: Gui}
@@ -361,5 +361,7 @@ combos:
   k: Ctl+C
 - p: [27, 28]
   k: Ctl+V
+- p: [16, 19]
+  k: CAPSLOCK
 - p: [15, 16]
   k: Ctl+Sft+T
