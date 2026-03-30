@@ -364,4 +364,4 @@ combos:
 - p: [27, 28]
   k: Ctl+V
 - p: [15, 16]
-  k: Ctl+Sft+T
+  k: Sft+Ctl+T
