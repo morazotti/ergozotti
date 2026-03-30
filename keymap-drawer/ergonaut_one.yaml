@@ -41,7 +41,7 @@ layers:
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
   - {t: ESCAPE, h: lower}
-  - {t: LEFT SHIFT, h: sticky}
+  - '&sticky_shift_capsword'
   - {t: BACKSPACE, h: raise}
   lower:
   - {t: F1, h: Gui}
@@ -345,8 +345,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [16, 19]
-  k: '&capsword'
 - p: [7, 8]
   k: BACKSPACE
 - p: [8, 9]
