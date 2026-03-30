@@ -41,7 +41,7 @@ layers:
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
   - {t: ESCAPE, h: lower}
-  - '&ros'
+  - '&ss_cw'
   - {t: BACKSPACE, h: raise}
   lower:
   - {t: F1, h: Gui}
