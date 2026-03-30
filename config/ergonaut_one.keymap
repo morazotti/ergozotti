@@ -188,7 +188,7 @@
 	ros: repeat_or_shift {
 	    compatible = "zmk,behavior-hold-tap";
 	    label = "REPEAT_OR_SHIFT";
-	    #binding-cells = <2>;
+	    #binding-cells = <0>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <150>;
 
@@ -205,7 +205,7 @@
 &kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L                   &kp U            &kp Y           &kp SEMICOLON    &kp LBKT
 &live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N       &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O  &live_keys SQT
 &mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M                   &kp COMMA        &kp DOT         &lt 7 FSLH       &mt RIGHT_ALT BSLH
-                                                     &lt 2 TAB        &mt LS(LA(LC(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &ss_cw  &lt 2 BACKSPACE
+                                                     &lt 2 TAB        &mt LS(LA(LC(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &ros  &lt 2 BACKSPACE
             >;
         };
 
