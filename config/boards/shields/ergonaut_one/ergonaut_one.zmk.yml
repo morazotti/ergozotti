@@ -6,6 +6,7 @@ url: https://github.com/ergonautkb/one
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+  - studio
 siblings:
   - ergonaut_one_left
   - ergonaut_one_right

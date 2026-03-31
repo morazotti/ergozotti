@@ -1,14 +1,21 @@
 * Tasks
-** TODO 20260305174619 leader key 
+** DONE 20260305174619 leader key
 :PROPERTIES:
 :ID:       bbf7dae4-791f-4f48-8d0a-5c1d05a15b24
 :TASK_NUM: 1
 :END:
 Movi a leader key para um combo (e+i no colemak), mas parece que o mais sensato seja colocá-la onde meu backspace é atualmente. Vou pensar nisso.
-** TODO 20260327095227 Permitir os acentos serem em maiúsculo
+
+- <2026-03-31 Tue>
+  Uma vez que o ESC já estava em um combo, eu resolvi tirá-lo para deixar  a Leader Key. Contudo, ainda estou me acostumando.
+
+** DONE 20260327095227 Permitir os acentos serem em maiúsculo
+
 :PROPERTIES:
 :ID:       36319002ee09b24c0778f81c849ebb80
 :SOURCE:   [[file:config/ergonaut_one.keymap::232]]
 :TASK_NUM: NICOLAS-1
 :END:
 Por enquanto, para utilizar um acento em maiúsculo, preciso apertar acento + Shift + letra, ao invés de Shift + letra acentuada.
+
+- <2026-03-31 Tue> Utilizei uma série de macros e mod morphs que não transformam SQT em DQT e GRAVE em TILDE.
