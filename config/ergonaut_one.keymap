@@ -174,7 +174,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        toggle_or_quit_game_num: toggle_or_quit_game_num {
+        tgnum: toggle_or_quit_game_num {
             compatible = "zmk,behavior-tap-dance";
             label = "TOGGLE_OR_QUIT_GAME_NUM";
             #binding-cells = <0>;
@@ -238,7 +238,7 @@
 &kp TAB    &kp Q  &kp W  &kp E           &kp R        &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
 &kp LSHFT  &kp A  &kp S  &kp D           &kp F        &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
 &kp LCTRL  &kp Z  &kp X  &kp C           &kp V        &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &tog 4
-                         &mt LALT ENTER  &lt 6 SPACE  &toggle_or_quit_game_num  &trans  &trans  &trans
+                         &mt LALT ENTER  &lt 6 SPACE  &tgnum  &trans  &trans  &trans
             >;
         };
 

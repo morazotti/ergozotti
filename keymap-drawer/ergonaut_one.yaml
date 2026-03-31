@@ -211,7 +211,7 @@ layers:
   - {t: Game, h: toggle}
   - {t: ENTER, h: Alt}
   - {t: ␣, h: Mirror Game}
-  - '&toggle_or_quit_game_num'
+  - '&tgnum'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
