@@ -38,9 +38,9 @@ layers:
   - {t: /, h: accents}
   - {t: \, h: RIGHT ALT}
   - {t: ↹, h: raise}
-  - {t: ␣, h: Hyper+LEFT GUI}
+  - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: lower}
-  - {t: Hyper+F12, h: lower}
+  - {t: ESCAPE, h: lower}
   - '&ss_cw'
   - {t: BACKSPACE, h: raise}
   lower:
