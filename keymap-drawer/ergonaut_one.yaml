@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: ergonaut_one}
 layers:
-  default:
+  Base:
   - ']'
   - Q
   - W
@@ -26,7 +26,7 @@ layers:
   - {t: O, h: RIGHT GUI}
   - '&live_keys SQT'
   - {t: '-', h: RIGHT ALT}
-  - {t: Z, h: accents}
+  - {t: Z, h: Accents}
   - X
   - {t: C, h: 'AltGr+,'}
   - V
@@ -35,15 +35,15 @@ layers:
   - M
   - ','
   - .
-  - {t: /, h: accents}
+  - {t: /, h: Accents}
   - {t: \, h: RIGHT ALT}
-  - {t: ↹, h: raise}
+  - {t: ↹, h: Raise}
   - {t: ␣, h: Meh+LEFT GUI}
-  - {t: ENTER, h: lower}
-  - {t: ESCAPE, h: lower}
+  - {t: ENTER, h: Lower}
+  - {t: ESCAPE, h: Lower}
   - '&ss_cw'
-  - {t: BACKSPACE, h: raise}
-  lower:
+  - {t: BACKSPACE, h: Raise}
+  Lower:
   - {t: F1, h: Gui}
   - F2
   - F3
@@ -86,7 +86,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  raise:
+  Raise:
   - {t: KP NUM, h: Gui}
   - KP SLASH
   - KP 7
@@ -122,22 +122,22 @@ layers:
   - PAGE UP
   - End
   - {t: ▽, type: trans}
-  - {t: game_mode, h: toggle}
+  - {t: Game, h: toggle}
   - {t: PREV, type: held}
   - PLAY PAUSE
-  - {t: NEXT, h: lower}
-  - {t: PREV, h: lower}
+  - {t: NEXT, h: Lower}
+  - {t: PREV, h: Lower}
   - PLAY PAUSE
   - NEXT
-  adjust:
+  Adjust:
   - Boot
   - ''
   - ''
   - ''
+  - '&studio_unlock'
   - ''
   - ''
-  - ''
-  - ''
+  - '&studio_unlock'
   - ''
   - ''
   - ''
@@ -172,7 +172,7 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  game_mode:
+  Game:
   - ↹
   - Q
   - W
@@ -208,14 +208,14 @@ layers:
   - ','
   - .
   - /
-  - {t: game_mode, h: toggle}
+  - {t: Game, h: toggle}
   - {t: ENTER, h: Alt}
-  - {t: ␣, h: mirror-game}
+  - {t: ␣, h: Mirror Game}
   - '&toggle_or_quit_game_num'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  game_num:
+  Game Num:
   - F1
   - '='
   - '7'
@@ -258,7 +258,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  mirror-game:
+  Mirror Game:
   - ↹
   - P
   - O
@@ -301,7 +301,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  accents:
+  Accents:
   - {t: ▽, type: trans}
   - '&umt A'
   - {t: ▽, type: trans}
