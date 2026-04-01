@@ -38,7 +38,7 @@ layers:
   - {t: /, h: Accents}
   - {t: \, h: RIGHT ALT}
   - {t: ↹, h: Raise}
-  - {t: ␣, h: Hyper+LEFT GUI}
+  - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: Lower}
   - {t: ESCAPE, h: Lower}
   - '&ss_cw'

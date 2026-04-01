@@ -7,9 +7,6 @@
 #define RSE 2
 #define ADJ 3
 
-#define HYPER(key) LS(LC(LA(LG(key))))
-#define MEH(key) LS(LC(LA(key)))
-
 &lt {
     tapping-term-ms = <180>;
     quick-tap-ms = <130>;
@@ -71,7 +68,7 @@
         leader {
             timeout-ms = <18>;
             require-prior-idle-ms = <80>;
-            bindings = <&kp HYPER(F12)>;
+            bindings = <&kp LS(LC(LA(LG(F12))))>;
             key-positions = <20 21>;
         };
 
@@ -198,7 +195,7 @@
 &kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L                   &kp U            &kp Y           &kp SEMICOLON    &kp LBKT
 &live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N       &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O  &live_keys SQT
 &mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M                   &kp COMMA        &kp DOT         &lt 7 FSLH       &mt RIGHT_ALT BSLH
-                                                     &lt 2 TAB        &mt HYPER(LEFT_GUI) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &ss_cw  &lt 2 BACKSPACE
+                                                     &lt 2 TAB        &mt LS(LC(LA(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  &ss_cw  &lt 2 BACKSPACE
             >;
         };
 
