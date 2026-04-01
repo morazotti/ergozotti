@@ -317,7 +317,7 @@ layers:
   - '~'
   - '&act A'
   - '`'
-  - AltGr+S
+  - '&german_sz'
   - ''''
   - Sft+'
   - {t: ▽, type: trans}

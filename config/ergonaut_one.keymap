@@ -140,6 +140,13 @@
             bindings = <&kp SCROLLLOCK &kp G &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "ALPHA";
         };
+
+        german_sz: german_sz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SCROLLLOCK &kp S &kp S>;
+            label = "GERMAN_SZ";
+        };
     };
 
     behaviors {
@@ -270,7 +277,7 @@
             display-name = "Accents";
             bindings = <
 &trans     &umt A  &trans     &tld A         &trans   &trans       &trans  &trans  &act U  &trans  &umt U  &umt O
-&kp TILDE  &act A  &kp GRAVE  &kp RA(S)      &kp SQT  &kp LS(SQT)  &trans  &tld N  &act E  &act I  &act O  &tld O
+&kp TILDE  &act A  &kp GRAVE  &german_sz     &kp SQT  &kp LS(SQT)  &trans  &tld N  &act E  &act I  &act O  &tld O
 &trans     &sl 8   &kp CARET  &kp RA(COMMA)  &trans   &trans       &trans  &trans  &trans  &trans  &sl 8   &trans
                               &trans         &trans   &trans       &trans  &trans  &trans
             >;
