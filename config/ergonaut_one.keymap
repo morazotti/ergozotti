@@ -137,7 +137,7 @@
         greek: alpha {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp PAUSE_BREAK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp C_MENU &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "ALPHA";
         };
 
