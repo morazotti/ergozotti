@@ -109,7 +109,7 @@ layers:
   - ↓
   - ↑
   - →
-  - {t: ▽, type: trans}
+  - SCROLLLOCK
   - {t: ▽, type: trans}
   - Alt
   - KP 0
