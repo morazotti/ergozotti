@@ -307,7 +307,7 @@ layers:
   - {t: ▽, type: trans}
   - '&tld A'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: greek, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&act U'
@@ -327,7 +327,7 @@ layers:
   - '&act O'
   - '&tld O'
   - {t: ▽, type: trans}
-  - {t: greek, h: sticky, type: held}
+  - {type: held}
   - ^
   - AltGr+,
   - {t: ▽, type: trans}
@@ -336,7 +336,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: greek, h: sticky}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -350,7 +350,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -385,7 +385,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: LEFT SHIFT, h: sticky}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [7, 8]
