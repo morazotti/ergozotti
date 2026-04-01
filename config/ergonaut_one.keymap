@@ -285,9 +285,9 @@
 
         greek {
             bindings = <
-&trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &greek A  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &greek Q  &greek W &greek F &greek P &greek G &greek J &greek L &greek U &greek Y &trans &trans
+&trans  &greek A  &greek R &greek S &greek T &greek D &greek H &greek N &greek E &greek I &greek O &trans
+&trans  &greek Z  &greek X &greek C &greek V &greek B &greek K &greek M &trans  &trans  &trans  &trans
                           &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };

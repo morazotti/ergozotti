@@ -19,3 +19,12 @@ Movi a leader key para um combo (e+i no colemak), mas parece que o mais sensato 
 Por enquanto, para utilizar um acento em maiúsculo, preciso apertar acento + Shift + letra, ao invés de Shift + letra acentuada.
 
 - <2026-03-31 Tue> Utilizei uma série de macros e mod morphs que não transformam SQT em DQT e GRAVE em TILDE.
+
+** TODO 20260401101316 Adicionar uso de Compose para construir letras gregas
+:PROPERTIES:
+:ID:       5661ed3fd7ba5e814794653984dc2d6c
+:SOURCE:   [[file:project.org::23]]
+:TASK_NUM: NICOLAS-1
+:END:
+Ainda não sei qual é a maneira de construir letras gregas, mas pensei em colocar o compose como scroll lock na camada de acentos. Aí posso apertar os dois botões da camada (~/~ e ~z~), seguidos de uma tecla que o macro compõe. 
+
