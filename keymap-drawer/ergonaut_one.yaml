@@ -306,7 +306,7 @@ layers:
   - '&umt A'
   - {t: ▽, type: trans}
   - '&tld A'
-  - {t: ▽, type: trans}
+  - {t: Greek Symbols, h: sticky}
   - MENU
   - {t: ▽, type: trans}
   - SCROLLLOCK
@@ -349,7 +349,7 @@ layers:
   - '&greek Q'
   - '&greek W'
   - '&greek F'
-  - '&greek P'
+  - {t: '&greek P', type: held}
   - '&greek G'
   - '&greek J'
   - '&greek L'
@@ -370,7 +370,7 @@ layers:
   - '&greek O'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&greek Z'
+  - {t: '&greek Z', type: held}
   - '&greek X'
   - '&greek C'
   - '&greek V'

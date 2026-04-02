@@ -137,7 +137,7 @@
         greek: greek {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp C_MENU>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp C_MENU &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GREEK";
         };
 
@@ -276,7 +276,7 @@
         accents {
             display-name = "Accents";
             bindings = <
-&trans     &umt A  &trans     &tld A         &trans   &kp C_MENU   &trans  &kp SCROLLLOCK  &act U  &trans  &umt U  &umt O
+&trans     &umt A  &trans     &tld A         &sl 8    &kp C_MENU   &trans  &kp SCROLLLOCK  &act U  &trans  &umt U  &umt O
 &kp TILDE  &act A  &kp GRAVE  &german_sz     &kp SQT  &kp LS(SQT)  &trans  &tld N          &act E  &act I  &act O  &tld O
 &trans     &trans  &kp CARET  &kp RA(COMMA)  &trans   &trans       &trans  &trans          &trans  &trans  &trans  &trans
                               &trans         &trans   &trans       &trans  &trans          &trans
@@ -286,12 +286,11 @@
         greek {
             display-name = "Greek Symbols";
             bindings = <
-&trans  &greek Q  &greek W  &greek F  &greek P  &greek G  &greek J  &greek L  &greek U   &greek Y  &trans     &trans
-&trans  &greek A  &greek R  &greek S  &greek T  &greek D  &greek H  &greek N  &greek E   &greek I  &greek O   &trans
-&trans  &greek Z  &greek X  &greek C  &greek V  &greek B  &greek K  &greek M  &trans     &trans    &trans     &trans
+&trans  &greek Q  &greek W  &greek F  &greek P  &greek G  &greek J  &greek L  &greek U  &greek Y  &trans    &trans
+&trans  &greek A  &greek R  &greek S  &greek T  &greek D  &greek H  &greek N  &greek E  &greek I  &greek O  &trans
+&trans  &greek Z  &greek X  &greek C  &greek V  &greek B  &greek K  &greek M  &trans    &trans    &trans    &trans
                             &trans    &trans    &trans    &trans    &trans    &trans
             >;
         };
-
     };
 };
