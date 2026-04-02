@@ -109,8 +109,8 @@ layers:
   - ↓
   - ↑
   - →
-  - SCROLLLOCK
-  - {t: ▽, type: trans}
+  - BACK
+  - ⏭️
   - Alt
   - KP 0
   - KP 1
@@ -309,7 +309,7 @@ layers:
   - {t: ▽, type: trans}
   - MENU
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SCROLLLOCK
   - '&act U'
   - {t: ▽, type: trans}
   - '&umt U'
