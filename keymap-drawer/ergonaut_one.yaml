@@ -42,7 +42,7 @@ layers:
   - {t: ENTER, h: Lower}
   - {t: ESCAPE, h: Lower}
   - '&ss_cw'
-  - {t: BACKSPACE, h: Raise}
+  - {t: SCROLLLOCK, h: Raise}
   Lower:
   - {t: F1, h: Gui}
   - F2
