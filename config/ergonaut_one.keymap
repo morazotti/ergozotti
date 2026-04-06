@@ -114,6 +114,12 @@ ZMK_ADAPTIVE_KEY(
             bindings = <&kp LC(LS(T))>;
             key-positions = <15 16>;
         };
+
+        greek_combo {
+            timeout-ms = <30>;
+            key-positions = <3 4>;
+            bindings = <&tggreek>;
+        };
     };
 
     macros {
@@ -155,7 +161,7 @@ ZMK_ADAPTIVE_KEY(
         greek: greek {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp C_MENU>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&greek_leader>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GREEK";
         };
 
@@ -203,6 +209,21 @@ ZMK_ADAPTIVE_KEY(
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        greek_leader: greek_leader {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GREEK_LEADER";
+            #binding-cells = <0>;
+            bindings = <&kp C_MENU>, <&kp C_MENU>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RALT)>;
+        };
+
+        tggreek: tggreek {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TG_GREEK";
+            #binding-cells = <0>;
+            bindings = <&sl 8>, <&tog 8>;
+        };
+
         tgnum: toggle_or_quit_game_num {
             compatible = "zmk,behavior-tap-dance";
             label = "TOGGLE_OR_QUIT_GAME_NUM";
@@ -220,7 +241,7 @@ ZMK_ADAPTIVE_KEY(
 &kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L              &kp U            &kp Y           &kp SEMICOLON         &kp LBKT
 &live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O       &live_keys SQT
 &mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M              &kp COMMA        &kp DOT         &altgr_accent 7 FSLH  &mt RIGHT_ALT BSLH
-                                                     &lt 2 TAB        &mt LS(LC(LA(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  MAGIC_SHIFT        &lt 2 BACKSPACE
+                                                     &lt 2 TAB        &mt LS(LC(LA(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 ESCAPE  MAGIC_SHIFT        &lt 2 SCROLLLOCK
             >;
         };
 
@@ -287,7 +308,7 @@ ZMK_ADAPTIVE_KEY(
         accents {
             display-name = "Accents";
             bindings = <
-&trans     &umt A  &trans     &tld A         &trans   &kp C_MENU   &trans  &kp SCROLLLOCK  &act U  &trans  &umt U  &umt O
+&trans     &umt A  &trans     &tld A         &trans   &tggreek     &trans  &kp SCROLLLOCK  &act U  &trans  &umt U  &umt O
 &kp TILDE  &act A  &kp GRAVE  &german_sz     &kp SQT  &kp LS(SQT)  &trans  &tld N          &act E  &act I  &act O  &tld O
 &trans     &trans  &kp CARET  &kp RA(COMMA)  &trans   &trans       &trans  &trans          &trans  &trans  &trans  &trans
                               &trans         &trans   &trans       &trans  &trans          &trans

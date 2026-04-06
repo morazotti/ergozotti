@@ -42,7 +42,7 @@ layers:
   - {t: ENTER, h: Lower}
   - {t: ESCAPE, h: Lower}
   - '&magic_shift LSHFT 0'
-  - {t: BACKSPACE, h: Raise}
+  - {t: SCROLLLOCK, h: Raise}
   Lower:
   - {t: F1, h: Gui}
   - F2
@@ -307,7 +307,7 @@ layers:
   - {t: ▽, type: trans}
   - '&tld A'
   - {t: ▽, type: trans}
-  - MENU
+  - '&tggreek'
   - {t: ▽, type: trans}
   - SCROLLLOCK
   - '&act U'
@@ -408,3 +408,5 @@ combos:
   k: CAPSLOCK
 - p: [15, 16]
   k: Ctl+Sft+T
+- p: [3, 4]
+  k: '&tggreek'
