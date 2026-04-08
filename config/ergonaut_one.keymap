@@ -119,9 +119,23 @@ ZMK_MOD_MORPH(magic_shift_tap,
             key-positions = <3 4>;
             bindings = <&tggreek>;
         };
+
+        plus_minus_combo {
+            timeout-ms = <30>;
+            key-positions = <12 24>;
+            bindings = <&plus_minus>;
+        };
     };
 
     macros {
+
+    	plus_minus: plus_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SCROLLLOCK &kp PLUS &kp MINUS>;
+            label = "PLUS_MINUS";
+	};
+
         live_keys: live_keys {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;

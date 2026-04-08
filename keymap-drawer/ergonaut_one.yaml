@@ -410,3 +410,5 @@ combos:
   k: Ctl+Sft+T
 - p: [3, 4]
   k: '&tggreek'
+- p: [12, 24]
+  k: '&plus_minus'
