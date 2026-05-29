@@ -307,7 +307,7 @@ layers:
   - {t: ▽, type: trans}
   - '&tld A'
   - {t: ▽, type: trans}
-  - '&tggreek'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SCROLLLOCK
   - '&act U'
@@ -344,54 +344,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Greek Symbols:
-  - {t: ▽, type: trans}
-  - '&greek Q'
-  - '&greek W'
-  - '&greek F'
-  - '&greek P'
-  - '&greek G'
-  - '&greek J'
-  - '&greek L'
-  - '&greek U'
-  - '&greek Y'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&greek A'
-  - '&greek R'
-  - '&greek S'
-  - '&greek T'
-  - '&greek D'
-  - '&greek H'
-  - '&greek N'
-  - '&greek E'
-  - '&greek I'
-  - '&greek O'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&greek Z'
-  - '&greek X'
-  - '&greek C'
-  - '&greek V'
-  - '&greek B'
-  - '&greek K'
-  - '&greek M'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
 - p: [7, 8]
-  k: BACKSPACE
+  k: {t: ⌫, h: Ctl+⌫}
 - p: [8, 9]
-  k: DELETE
+  k: {t: DELETE, h: Ctl+DELETE}
 - p: [19, 20]
   k: Esc
 - p: [14, 15]
@@ -408,7 +365,5 @@ combos:
   k: CAPSLOCK
 - p: [15, 16]
   k: Ctl+Sft+T
-- p: [3, 4]
-  k: '&tggreek'
 - p: [12, 24]
   k: '&plus_minus'
