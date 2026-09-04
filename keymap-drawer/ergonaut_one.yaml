@@ -375,10 +375,10 @@ layers:
   - {t: Mouse movement, h: toggle}
   - {t: Mouse movement, h: toggle}
   - {t: Mouse movement, h: toggle}
-  - '&mmv SCRL_LEFT'
-  - '&mmv SCRL_DOWN'
-  - '&mmv SCRL_UP'
-  - '&mmv SCRL_RIGHT'
+  - Scroll ←
+  - Scroll ↓
+  - Scroll ↑
+  - Scroll →
   - {t: Mouse movement, h: toggle}
   - {t: Mouse movement, h: toggle}
   - {t: Mouse movement, h: toggle}
