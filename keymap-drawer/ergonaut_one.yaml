@@ -344,6 +344,49 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Mouse movement:
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - Back Click
+  - Left Click
+  - Middle Click
+  - Right Click
+  - Forward Click
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - '&mmv SCRL_LEFT'
+  - '&mmv SCRL_DOWN'
+  - '&mmv SCRL_UP'
+  - '&mmv SCRL_RIGHT'
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
+  - {t: Mouse movement, h: toggle}
 combos:
 - p: [7, 8]
   k: {t: ⌫, h: Ctl+⌫}
@@ -352,7 +395,7 @@ combos:
 - p: [19, 20]
   k: Esc
 - p: [14, 15]
-  k: ↹
+  k: {t: Mouse movement, h: toggle}
 - p: [20, 21]
   k: Hyper+F12
 - p: [25, 26]
