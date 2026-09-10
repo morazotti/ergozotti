@@ -31,3 +31,5 @@ copy:
 	cp build/$(SHIELDS)_left/zephyr/zmk.uf2 firmware/$(SHIELDS)_left.uf2
 	cp build/$(SHIELDS)_right/zephyr/zmk.uf2 firmware/$(SHIELDS)_right.uf2
 	cp build/settings_reset/zephyr/zmk.uf2 firmware/settings_reset.uf2
+	rm -f firmware.zip
+	zip firmware.zip firmware/ -r
