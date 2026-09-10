@@ -40,7 +40,7 @@ layers:
   - {t: ↹, h: Raise}
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: Lower}
-  - {t: ESCAPE, h: Lower}
+  - {t: Hyper+F12, h: Lower}
   - '&magic_shift LSHFT 0'
   - {t: SCROLLLOCK, h: Raise}
   Lower:
