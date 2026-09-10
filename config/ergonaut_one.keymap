@@ -112,7 +112,7 @@ ZMK_MOD_MORPH(magic_shift_tap,
 
         ctrl_shift_t {
             bindings = <&kp LC(LS(T))>;
-            key-positions = <15 16>;
+            key-positions = <3 4>;
         };
 
         plus_minus_combo {

@@ -406,7 +406,7 @@ combos:
   k: Ctl+V
 - p: [16, 19]
   k: CAPSLOCK
-- p: [15, 16]
+- p: [3, 4]
   k: Ctl+Sft+T
 - p: [12, 24]
   k: '&plus_minus'
