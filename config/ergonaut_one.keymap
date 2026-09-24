@@ -5,13 +5,23 @@
 #include <zmk-helpers/helper.h>
 
 #define DEF 0
-#define LWR 1
-#define RSE 2
+#define FUN 1
+#define NUM 2
 #define ADJ 3
+#define GAME 4
+#define GAME_NUM 5
+#define MIRROR_GAME 6
+#define ACCENTS 7
+#define SYM 8
+#define NAV 9
 
 #define QUICK_TAP_MS 175
 
 #define MAGIC_SHIFT &magic_shift LSHFT 0
+#define MEH(keycode) LC(LS(LA(keycode)))
+#define HYP(keycode) LC(LS(LA(LG(keycode))))
+
+
 
 ZMK_HOLD_TAP(magic_shift,
     bindings = <&kp>, <&magic_shift_tap>;
@@ -86,7 +96,7 @@ ZMK_MOD_MORPH(magic_shift_tap,
         leader {
             timeout-ms = <18>;
             require-prior-idle-ms = <80>;
-            bindings = <&kp LS(LC(LA(LG(F12))))>;
+            bindings = <&kp HYP(F12)>;
             key-positions = <20 21>;
         };
 
@@ -103,11 +113,6 @@ ZMK_MOD_MORPH(magic_shift_tap,
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <27 28>;
-        };
-
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <16 19>;
         };
 
         ctrl_shift_t {
@@ -233,30 +238,30 @@ ZMK_MOD_MORPH(magic_shift_tap,
         default_layer {
             display-name = "Base";
             bindings = <
-&kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G        &kp J         &kp L              &kp U            &kp Y           &kp SEMICOLON         &kp LBKT
-&live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D        &kp H         &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O       &live_keys SQT
-&mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B        &kp K         &kp M              &kp COMMA        &kp DOT         &altgr_accent 7 FSLH  &mt RIGHT_ALT BSLH
-                                                     &lt 2 TAB        &mt LS(LC(LA(LEFT_GUI))) SPACE  &lt 1 ENTER  &lt 1 LS(LC(LA(LG(F12))))  MAGIC_SHIFT        &lt 2 SCROLLLOCK
+&kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G	       &kp J            &kp L              &kp U            &kp Y           &kp SEMICOLON         &kp LBKT
+&live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D            &kp H            &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O       &live_keys SQT
+&mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B            &kp K            &kp M              &kp COMMA        &kp DOT         &altgr_accent 7 FSLH  &mt RIGHT_ALT BSLH
+	      	     	   	     	 	     &lt NAV TAB      &mt MEH(LEFT_GUI) SPACE  	      &lt FUN ENTER    &lt SYM HYP(F12) MAGIC_SHIFT        &lt NUM SCROLLLOCK
             >;
         };
 
-        lower_layer {
-            display-name = "Lower";
+        fun_layer {
+            display-name = "Function";
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp F7            &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &live_keys CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6            &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
-                                  &trans    &trans    &trans     &trans            &trans    &trans
+&trans  &trans       &trans	    &kp LA(TAB)	     &kp LG(TAB)     &trans	 &kp PRINTSCREEN &kp F5 	&kp F6  	&kp F7   &kp F8   &trans
+&trans	&sk LEFT_GUI &sk LEFT_ALT   &sk LEFT_CONTROL &sk LEFT_SHIFT  &trans 	 &kp LA(TAB)	 &kp F1		&kp F2		&kp F3   &kp F4   &trans
+&trans	&trans       &trans  	    &trans     	     &trans  	     &trans 	 &kp LG(TAB)	 &kp F9 	&kp F10 	&kp F11  &kp F12  &live_keys TILDE
+				    &trans  	     &trans  	     &trans 	 &kp ENTER	 &kp BACKSPACE  &kp DELETE    	
             >;
         };
 
-        raise_layer {
-            display-name = "Raise";
+        num_layer {
+            display-name = "Numbers";
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH              &kp KP_N7           &kp KP_N8        &kp KP_N9             &kp KP_MINUS  &kp PRINTSCREEN  &kp C_VOL_DN      &kp K_MUTE   &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
-&mt LCTRL EQUAL  &mt LEFT_GUI KP_MULTIPLY  &mt LEFT_ALT KP_N4  &mt LCTRL KP_N5  &mt LEFT_SHIFT KP_N6  &kp KP_PLUS   &kp LEFT         &kp DOWN          &kp UP       &kp RIGHT        &kp K_BACK            &kp K_FORWARD
-&kp LALT         &kp KP_N0                 &kp KP_N1           &kp KP_N2        &kp KP_N3             &kp KP_DOT    &kp HOME         &kp PAGE_DOWN     &kp PAGE_UP  &kp END          &trans                &tog 4
-                                                               &kp K_PREV       &kp K_PLAY_PAUSE      &lt 1 K_NEXT  &lt 1 K_PREV     &kp K_PLAY_PAUSE  &kp K_NEXT
+&trans	  &kp FSLH           &kp N7           &kp N8        &kp N9             &kp MINUS     &trans	       &trans         &trans		&trans         &trans	     &bootloader     
+&trans	  &mt LEFT_GUI STAR  &mt LEFT_ALT N4  &mt LCTRL N5  &mt LEFT_SHIFT N6  &kp PLUS      &trans 	       &sk LEFT_SHIFT &sk LEFT_CONTROL  &sk LEFT_ALT   &sk LEFT_GUI  &trans
+&sk RALT  &kp N0             &kp N1           &kp N2        &kp N3             &kp DOT       &trans 	       &trans         &trans            &trans         &trans        &trans
+				              &kp LPAR      &kp COMMA          &kp RPAR	     &trans	       &trans         &trans
             >;
         };
 
@@ -310,15 +315,24 @@ ZMK_MOD_MORPH(magic_shift_tap,
             >;
         };
 
-        mouse {
-            display-name = "Mouse movement";
-            bindings = <
-	&tog 8  &tog 8	&tog 8	&tog 8	&tog 8	&tog 8	&mkp MB4        &mkp LCLK	&mkp MCLK	&mkp RCLK	&mkp MB5	&tog 8
-	&tog 8  &tog 8	&tog 8	&tog 8	&tog 8	&tog 8	&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT	&tog 8		&tog 8
-	&tog 8  &tog 8	&tog 8	&tog 8	&tog 8	&tog 8	&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT	&tog 8		&tog 8
-				&tog 8	&tog 8	&tog 8  &tog 8		&tog 8	&tog 8
-		>;
-        };
+	symbols_layer {
+	  display-name = "Symbols";
+	  bindings = <
+	&trans			&kp RBKT	&kp AMPS	&kp STAR	&kp EQUAL		&kp LBKT	&trans	&trans		&trans			&trans		&trans		&trans
+	&trans			&kp RPAR	&kp DLLR	&kp PRCNT	&live_keys CARET	&kp LPAR	&trans	&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT	&sk LEFT_GUI	&trans
+	&live_keys GRAVE	&kp RBRC	&kp EXCL	&kp AT		&kp HASH		&kp LBRC	&trans	&trans		&trans			&trans		&trans		&trans
+		   		    		    		&trans		&trans			&trans		&trans	&trans		&trans
+	    >;
+	};
 
+	nav_layer {
+	  display-name = "Navigation";
+	  bindings = <
+	&bootloader  &trans		&trans		&trans			&trans			&trans  &kp INSERT      &kp C_VOL_DN		&kp K_MUTE	&kp C_VOLUME_UP &kp C_BRIGHTNESS_INC	&trans     
+	&trans       &sk LEFT_GUI	&sk LEFT_ALT    &sk LEFT_CONTROL	&sk LEFT_SHIFT		&trans  &kp LEFT        &kp DOWN        	&kp UP		&kp RIGHT       &kp CAPSLOCK		&trans     
+	&trans       &trans		&trans          &trans			&trans			&trans  &kp HOME        &kp PAGE_DOWN   	&kp PAGE_UP	&kp END         &kp C_BRIGHTNESS_DEC    &tog GAME 
+		     					&trans  		&trans			&trans	&kp K_PREV	&kp K_PLAY_PAUSE	&lt 1 K_NEXT     
+	    >;
+	};
     };
 };
