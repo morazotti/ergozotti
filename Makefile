@@ -2,7 +2,7 @@ SHIELDS = $(patsubst %.keymap,%,$(notdir $(wildcard config/*.keymap)))
 
 .PHONY: all update clean build copy debug
 
-all: clean build copy 
+all: build copy 
 
 init:
 	docker run --rm -v $(PWD):/workdir -w /workdir zmkfirmware/zmk-dev-arm:3.5 bash -c "west init -l config"
@@ -22,10 +22,13 @@ debug:
 
 build:
 	docker run --rm -v $(PWD):/workdir -w /workdir zmkfirmware/zmk-dev-arm:3.5 bash -c "\
-		west zephyr-export && \
-		west build -s zmk/app -d build/$(SHIELDS)_left -b xiao_ble//zmk -S studio-rpc-usb-uart -- -DZMK_CONFIG=/workdir/config -DSHIELD=$(SHIELDS)_left && \
-		west build -s zmk/app -d build/$(SHIELDS)_right -b xiao_ble//zmk -- -DZMK_CONFIG=/workdir/config -DSHIELD=$(SHIELDS)_right && \
-		west build -s zmk/app -d build/settings_reset -b xiao_ble//zmk -- -DSHIELD=settings_reset"
+		west zephyr-export && { \
+			west build -s zmk/app -d build/$(SHIELDS)_left -b xiao_ble//zmk -S studio-rpc-usb-uart -- -DZMK_CONFIG=/workdir/config -DSHIELD=$(SHIELDS)_left & PID1=\$$! ; \
+			west build -s zmk/app -d build/$(SHIELDS)_right -b xiao_ble//zmk -- -DZMK_CONFIG=/workdir/config -DSHIELD=$(SHIELDS)_right & PID2=\$$! ; \
+			west build -s zmk/app -d build/settings_reset -b xiao_ble//zmk -- -DSHIELD=settings_reset & PID3=\$$! ; \
+			wait \$$PID1 && wait \$$PID2 && wait \$$PID3; \
+		}"
+
 
 copy:
 	cp build/$(SHIELDS)_left/zephyr/zmk.uf2 firmware/$(SHIELDS)_left.uf2

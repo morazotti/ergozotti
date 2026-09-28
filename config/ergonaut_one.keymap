@@ -68,14 +68,14 @@ ZMK_MOD_MORPH(magic_shift_tap,
         bksp {
             timeout-ms = <30>;
             require-prior-idle-ms = <80>;
-	    bindings = <&combo_bksp LC(BSPC) BSPC>;
+	    bindings = <&kp2 LC(BSPC) BSPC>;
             key-positions = <7 8>;
         };
 
         del {
             timeout-ms = <30>;
             require-prior-idle-ms = <80>;
-	    bindings = <&combo_bksp LC(DELETE) DELETE>;
+	    bindings = <&kp2 LC(DELETE) DELETE>;
             key-positions = <8 9>;
         };
 
@@ -84,13 +84,6 @@ ZMK_MOD_MORPH(magic_shift_tap,
             require-prior-idle-ms = <80>;
             bindings = <&kp ESC>;
             key-positions = <19 20>;
-        };
-
-	toggle_mouse {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <80>;
-            bindings = <&tog 8>;
-            key-positions = <14 15>;
         };
 
         leader {
@@ -137,11 +130,11 @@ ZMK_MOD_MORPH(magic_shift_tap,
             label = "PLUS_MINUS";
 	};
 
-        live_keys: live_keys {
+        kp: kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
-            label = "live_keys";
+            label = "kp";
         };
 
         act: act {
@@ -178,6 +171,35 @@ ZMK_MOD_MORPH(magic_shift_tap,
             bindings = <&kp SCROLLLOCK &kp S &kp S>;
             label = "GERMAN_SZ";
         };
+
+	td: turn_dead {
+	    compatible = "zmk,behavior-macro-one-param";
+	    #binding-cells = <1>;
+	    bindings = <&kp SCROLLLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+	    };
+
+	td2: turn_dead_two {
+	    compatible = "zmk,behavior-macro-two-param";
+	    #binding-cells = <2>;
+	    bindings = <&kp SCROLLLOCK>,
+		<&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,
+		<&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>;
+	    };
+
+	cedilla_lower: cedilla_lower {
+	    compatible = "zmk,behavior-macro-one-param";
+	    #binding-cells = <1>;
+	    bindings = <&kp SCROLLLOCK &kp COMMA &kp C>;
+	    };
+
+
+	cedilla_upper: cedilla_upper {
+	    compatible = "zmk,behavior-macro-one-param";
+	    #binding-cells = <1>;
+	    bindings = <&kp SCROLLLOCK &kp COMMA &kp LS(C)>;
+	    };
+
+
     };
 
     behaviors {
@@ -223,14 +245,208 @@ ZMK_MOD_MORPH(magic_shift_tap,
             bindings = <&sl 5>, <&tog 5>;
         };
 
-	combo_bksp: combo_backspace_ht {
+	kp2: key_two_presses {
 	    compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    bindings = <&kp>, <&kp>;
+	    };
+
+
+	act_a: acute_a {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 SQT A>, <&td2 SQT LS(A)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
-    };
+
+	act_e: acute_e {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 SQT E>, <&td2 SQT LS(E)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	act_i: acute_i {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 SQT I>, <&td2 SQT LS(I)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	act_o: acute_o {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 SQT O>, <&td2 SQT LS(O)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	act_u: acute_u {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 SQT U>, <&td2 SQT LS(U)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	grv_a: grave_a {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 GRAVE A>, <&td2 GRAVE LS(A)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	grv_e: grave_e {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 GRAVE E>, <&td2 GRAVE LS(E)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	grv_i: grave_i {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 GRAVE I>, <&td2 GRAVE LS(I)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	grv_o: grave_o {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 GRAVE O>, <&td2 GRAVE LS(O)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	grv_u: grave_u {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 GRAVE U>, <&td2 GRAVE LS(U)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	tld_a: tilde_a {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE A>, <&td2 TILDE LS(A)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	tld_e: tilde_e {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE E>, <&td2 TILDE LS(E)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	tld_i: tilde_i {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE I>, <&td2 TILDE LS(I)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	tld_o: tilde_o {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE O>, <&td2 TILDE LS(O)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	tld_u: tilde_u {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE U>, <&td2 TILDE LS(U)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	tld_n: tilde_n {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 TILDE N>, <&td2 TILDE LS(N)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+
+	uml_a: umlaut_a {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 DQT A>, <&td2 DQT LS(A)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	uml_e: umlaut_e {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 DQT E>, <&td2 DQT LS(E)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	uml_i: umlaut_i {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 DQT I>, <&td2 DQT LS(I)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	uml_o: umlaut_o {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 DQT O>, <&td2 DQT LS(O)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	uml_u: umlaut_u {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&td2 DQT U>, <&td2 DQT LS(U)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+
+	ht_lower: hold_tap_lower {
+	    compatible = "zmk,behavior-hold-tap";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <160>;
+	    quick-tap-ms = <150>;
+	    bindings = <&cedilla_lower>, <&kp>;
+	};
+
+	ht_upper: hold_tap_upper {
+	    compatible = "zmk,behavior-hold-tap";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <160>;
+	    quick-tap-ms = <150>;
+	    bindings = <&cedilla_upper>, <&kp>;
+	};
+
+	cc: c_cedilla_morph {
+	    compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+	    bindings = <&ht_lower 0 C>, <&ht_upper 0 LS(C)>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+	mosl: sticky_and_momentary {
+	    compatible = "zmk,behavior-hold-tap";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <100>;
+	    bindings = <&mo>, <&sl>;
+	};
+	    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -239,18 +455,18 @@ ZMK_MOD_MORPH(magic_shift_tap,
             display-name = "Base";
             bindings = <
 &kp RBKT             &kp Q           &kp W           &kp F            &kp P                           &kp G	       &kp J            &kp L              &kp U            &kp Y           &kp SEMICOLON         &kp LBKT
-&live_keys GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D            &kp H            &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O       &live_keys SQT
-&mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &mt RA(COMMA) C  &kp V                           &kp B            &kp K            &kp M              &kp COMMA        &kp DOT         &altgr_accent 7 FSLH  &mt RIGHT_ALT BSLH
-	      	     	   	     	 	     &lt NAV TAB      &mt MEH(LEFT_GUI) SPACE  	      &lt FUN ENTER    &lt SYM HYP(F12) MAGIC_SHIFT        &lt NUM SCROLLLOCK
+&kp GRAVE     &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T                &kp D            &kp H            &mt RIGHT_SHIFT N  &mt RCTRL E      &mt LEFT_ALT I  &mt RIGHT_GUI O       &kp SQT
+&mt RIGHT_ALT MINUS  &lt 7 Z         &kp X           &cc  &kp V                           &kp B            &kp K            &kp M              &kp COMMA        &kp DOT         &altgr_accent 7 FSLH  &mt RIGHT_ALT BSLH
+	      	     	   	     	 	     &lt NAV TAB      &mt MEH(LEFT_GUI) SPACE  	      &lt FUN ENTER    &lt SYM HYP(F12) MAGIC_SHIFT        &mosl NUM ACCENTS
             >;
         };
 
         fun_layer {
             display-name = "Function";
             bindings = <
-&trans  &trans       &trans	    &kp LA(TAB)	     &kp LG(TAB)     &trans	 &kp PRINTSCREEN &kp F5 	&kp F6  	&kp F7   &kp F8   &trans
+&trans  &trans       &kp LA(TAB)    &kp LG(TAB)      &trans	     &trans	 &kp PRINTSCREEN &kp F5 	&kp F6  	&kp F7   &kp F8   &trans
 &trans	&sk LEFT_GUI &sk LEFT_ALT   &sk LEFT_CONTROL &sk LEFT_SHIFT  &trans 	 &kp LA(TAB)	 &kp F1		&kp F2		&kp F3   &kp F4   &trans
-&trans	&trans       &trans  	    &trans     	     &trans  	     &trans 	 &kp LG(TAB)	 &kp F9 	&kp F10 	&kp F11  &kp F12  &live_keys TILDE
+&trans	&trans       &trans  	    &trans     	     &trans  	     &trans 	 &kp LG(TAB)	 &kp F9 	&kp F10 	&kp F11  &kp F12  &kp TILDE
 				    &trans  	     &trans  	     &trans 	 &kp ENTER	 &kp BACKSPACE  &kp DELETE    	
             >;
         };
@@ -308,10 +524,10 @@ ZMK_MOD_MORPH(magic_shift_tap,
         accents {
             display-name = "Accents";
             bindings = <
-&trans     &umt A  &trans     &tld A         &trans   &trans       &trans  &kp SCROLLLOCK  &act U  &trans  &umt U  &umt O
-&kp TILDE  &act A  &kp GRAVE  &german_sz     &kp SQT  &kp LS(SQT)  &trans  &tld N          &act E  &act I  &act O  &tld O
-&trans     &trans  &kp CARET  &kp RA(COMMA)  &trans   &trans       &trans  &trans          &trans  &trans  &trans  &trans
-                              &trans         &trans   &trans       &trans  &trans          &trans
+&trans	    &uml_a     &trans         &tld_a		&trans         &td G        &trans    &trans          &act_u          &uml_u    &uml_o
+&td TILDE   &act_a     &td GRAVE      &german_sz	&td SQT        &td LS(SQT)  &trans    &tld_n          &act_e          &act_i    &act_o
+&trans   &trans     &td CARET      &cc		&trans         &trans       &trans    &trans	      &td COMMA       &tld_o    &trans    &kp SQT
+				      &kp SCROLLLOCK	&trans         &trans       &trans    &trans          &kp SCROLLLOCK
             >;
         };
 
@@ -319,9 +535,9 @@ ZMK_MOD_MORPH(magic_shift_tap,
 	  display-name = "Symbols";
 	  bindings = <
 	&trans			&kp RBKT	&kp AMPS	&kp STAR	&kp EQUAL		&kp LBKT	&trans	&trans		&trans			&trans		&trans		&trans
-	&trans			&kp RPAR	&kp DLLR	&kp PRCNT	&live_keys CARET	&kp LPAR	&trans	&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT	&sk LEFT_GUI	&trans
-	&live_keys GRAVE	&kp RBRC	&kp EXCL	&kp AT		&kp HASH		&kp LBRC	&trans	&trans		&trans			&trans		&trans		&trans
-		   		    		    		&trans		&trans			&trans		&trans	&trans		&trans
+	&trans			&kp RPAR	&kp DLLR	&kp PRCNT	&kp CARET	&kp LPAR	&trans	&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT	&sk LEFT_GUI	&trans
+	&kp GRAVE		&kp RBRC	&kp EXCL	&kp AT		&kp HASH		&kp LBRC	&trans	&trans		&trans			&trans		&trans		&trans
+	    	   		    		    		&trans		&trans			&trans		&trans	&trans		&trans
 	    >;
 	};
 
