@@ -13,7 +13,7 @@ layers:
   - Y
   - ;
   - '['
-  - '&live_keys GRAVE'
+  - '`'
   - {t: A, h: LEFT GUI}
   - {t: R, h: LEFT ALT}
   - {t: S, h: Ctrl}
@@ -24,11 +24,11 @@ layers:
   - {t: E, h: Ctrl}
   - {t: I, h: LEFT ALT}
   - {t: O, h: RIGHT GUI}
-  - '&live_keys SQT'
+  - ''''
   - {t: '-', h: RIGHT ALT}
   - {t: Z, h: Accents}
   - X
-  - {t: C, h: 'AltGr+,'}
+  - {t: C, h: '&cedilla_lower', s: Sft+C}
   - V
   - B
   - K
@@ -41,14 +41,14 @@ layers:
   - {t: ␣, h: Meh+LEFT GUI}
   - {t: ENTER, h: Function}
   - {t: Hyper+F12, h: Symbols}
-  - '&magic_shift LSHFT 0'
-  - {t: SCROLLLOCK, h: Numbers}
+  - {t: Shift, h: Shift, s: '&capsword'}
+  - {t: Accents, h: Numbers}
   Function:
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Alt+↹
   - Gui+↹
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PRINTSCREEN
   - F5
@@ -79,7 +79,7 @@ layers:
   - F10
   - F11
   - F12
-  - '&live_keys TILDE'
+  - '~'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -303,47 +303,47 @@ layers:
   - {t: ▽, type: trans}
   Accents:
   - {t: ▽, type: trans}
-  - '&umt A'
+  - {t: '&td2 DQT A', s: '&td2 DQT LS(A)'}
   - {t: ▽, type: trans}
-  - '&tld A'
+  - {t: '&td2 TILDE A', s: '&td2 TILDE LS(A)'}
+  - {t: ▽, type: trans}
+  - '&td G'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&td2 SQT U', s: '&td2 SQT LS(U)'}
+  - {t: '&td2 DQT U', s: '&td2 DQT LS(U)'}
+  - {t: '&td2 DQT O', s: '&td2 DQT LS(O)'}
+  - {t: ▽, type: trans}
+  - '&td TILDE'
+  - {t: '&td2 SQT A', s: '&td2 SQT LS(A)'}
+  - '&td GRAVE'
+  - '&german_sz'
+  - '&td SQT'
+  - '&td LS(SQT)'
+  - {t: ▽, type: trans}
+  - {t: '&td2 TILDE N', s: '&td2 TILDE LS(N)'}
+  - {t: '&td2 SQT E', s: '&td2 SQT LS(E)'}
+  - {t: '&td2 SQT I', s: '&td2 SQT LS(I)'}
+  - {t: '&td2 SQT O', s: '&td2 SQT LS(O)'}
+  - ''''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - '&td CARET'
+  - {t: C, h: '&cedilla_lower', s: Sft+C}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&td COMMA'
+  - {t: '&td2 TILDE O', s: '&td2 TILDE LS(O)'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SCROLLLOCK
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SCROLLLOCK
-  - '&act U'
-  - {t: ▽, type: trans}
-  - '&umt U'
-  - '&umt O'
-  - '~'
-  - '&act A'
-  - '`'
-  - '&german_sz'
-  - ''''
-  - Sft+'
-  - {t: ▽, type: trans}
-  - '&tld N'
-  - '&act E'
-  - '&act I'
-  - '&act O'
-  - '&tld O'
-  - {t: ▽, type: trans}
-  - {type: held}
-  - ^
-  - AltGr+,
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   Symbols:
   - {t: ▽, type: trans}
   - ']'
@@ -361,7 +361,7 @@ layers:
   - )
   - $
   - '%'
-  - '&live_keys CARET'
+  - ^
   - (
   - {t: ▽, type: trans}
   - {t: LEFT SHIFT, h: sticky}
@@ -369,7 +369,7 @@ layers:
   - {t: LEFT ALT, h: sticky}
   - {t: LEFT GUI, h: sticky}
   - {t: ▽, type: trans}
-  - '&live_keys GRAVE'
+  - '`'
   - '}'
   - '!'
   - '@'
@@ -437,8 +437,6 @@ combos:
   k: {t: DELETE, h: Ctl+DELETE}
 - p: [19, 20]
   k: Esc
-- p: [14, 15]
-  k: {t: Symbols, h: toggle}
 - p: [20, 21]
   k: Hyper+F12
 - p: [25, 26]
@@ -451,3 +449,7 @@ combos:
   k: Ctl+Sft+T
 - p: [12, 24]
   k: '&plus_minus'
+- p: [7, 19]
+  k: ''''
+- p: [8, 20]
+  k: '"'
