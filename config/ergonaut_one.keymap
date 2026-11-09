@@ -539,7 +539,7 @@
 &kp RBKT		&kp Q			&kp W           &kp F				&kp P                   &kp G	&kp J   &kp L			&kp U           &kp Y           &kp SEMICOLON		&kp LBKT
 &kp GRAVE		&hml LEFT_GUI A		&hml LEFT_ALT R  &hml LCTRL S			&hml LEFT_SHIFT T        &kp D   &kp H   &hmr RIGHT_SHIFT N	&hmr RCTRL E     &hmr LEFT_ALT I  &hmr RIGHT_GUI O		&kp SQT
 &mt RIGHT_ALT MINUS	&lt 7 Z			&kp X           &cc				&kp V                   &kp B   &kp K   &kp M			&kp COMMA       &kp DOT         &altgr_accent 7 FSLH	&mt RIGHT_ALT BSLH
-&lt NAV TAB		&mt MEH(LEFT_GUI) SPACE &lt FUN ENTER   &lt SYM HYP(F12)            MAGIC_SHIFT             &mosl NUM ACCENTS
+&lt NAV TAB		&mt MEH(LEFT_GUI) SPACE &lt FUN ENTER   &lt 8 HYP(F12)            MAGIC_SHIFT             &mosl NUM ACCENTS
             >;
         };
 
@@ -613,15 +613,15 @@
 >;
 };
 
-symbols_layer {
-display-name = "Symbols";
-bindings = <
-&trans		&kp RBKT	&kp AMPS	&kp STAR	&kp EQUAL	&kp LBKT	&trans		&trans		&trans			&trans		&trans		&trans
-&trans		&kp RPAR	&kp DLLR	&kp PRCNT	&kp CARET	&kp LPAR	&trans		&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT	&sk LEFT_GUI	&trans
-&kp GRAVE	&kp RBRC	&kp EXCL	&kp AT		&kp HASH	&kp LBRC	&trans		&trans		&trans			&trans		&trans		&trans
-    		    		    		&trans		&trans		&trans		&trans		&trans		&trans
->;
-};
+	symbols_layer {
+	     display-name = "Symbols";
+	     bindings = <
+	&trans		&kp RBKT	&kp EQUAL	&kp STAR	&kp AMPS	&kp LBKT	&trans		&trans		&trans			&trans		&trans		&trans
+	&trans		&kp RPAR	&kp HASH        &kp AT		&kp EXCL	&kp LPAR	&trans		&sk LEFT_SHIFT	&sk LEFT_CONTROL	&sk LEFT_ALT	&sk LEFT_GUI	&trans
+	&kp GRAVE	&kp RBRC	&kp CARET     	&kp PRCNT	&kp DLLR 	&kp LBRC	&trans		&trans		&trans			&trans		&trans		&trans
+    	&trans		&trans		&trans		&trans		&trans		&trans
+	    >;
+	};
 
 nav_layer {
 display-name = "Navigation";
