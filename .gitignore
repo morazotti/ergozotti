@@ -1,1 +1,9 @@
 /build/
+/firmware/
+/firmware.zip
+/.west/
+/modules/
+/zephyr/
+/zmk/
+/optional/
+/.venv/
